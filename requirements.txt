@@ -1,0 +1,11 @@
+yt-dlp==2024.3.10
+Pillow==10.2.0
+
+Might need tkinter, which is often part of Python but might need to be installed separately on some systems 
+(e.g., 
+####
+
+sudo apt install python3-tk
+
+#### 
+on Debian-based systems like Linux Mint).

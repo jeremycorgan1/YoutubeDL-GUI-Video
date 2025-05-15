@@ -19,7 +19,7 @@ class YouTubeDownloader(tk.Tk):
         self.background_label.place(x=0, y=0, relwidth=1, relheight=1)
         
         # Hardcoded background image path
-        self.background_image_path = "/home/oem/Downloads/54abl.jpg"  # Replace with your image path
+        self.background_image_path = "/home/oem/YoutubeDLGUI/chibiytdl.png"  # Replace with your image path
         self.load_background_image()  # Load the background image on startup
         
         # Create UI components directly on the main window

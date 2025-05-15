@@ -1,20 +1,43 @@
-Works with linux mint cinnamon as of 11/2024
-.desktop file for desktop icon
-Images included to skin desktop icon and GUI
-###install###
-This runs from a virtual enviornment
-Need python3, pilllow, tkinter, youtube-dl
-##
-cd into path
-nano or whatever text editor to create python file, YTDL.py
-nano or whatever text editor to create YTDL.desktop file
-bash (to enter shell)
-python3 -m venv myenv (go into venv)
-source myenv/bin/activate (activate venv)
-pip install youtube-dl
-pip install pillow
+# YTDL - YouTube Video Downloader
 
-Move YTDL.desktop to desktop
-chmod +x /path/to/YTDL.py (permissions to activate)
-chmod +x /path/to/YTDL.desktop (permissions to activate)
-also check both file details by clicking on them to make sure is read and write and exe
+A simple GUI tool to download YouTube videos using `yt-dlp`.
+
+## Prerequisites
+- Python 3.12 or later
+- `tkinter` (usually included with Python, but may need to be installed separately, e.g., `sudo apt install python3-tk` on Debian/Ubuntu-based systems)
+
+## Installation
+1. Clone this repository:
+https://github.com/jeremycorgan1/YoutubeDL-GUI-Video.git
+
+2. Create a virtual environment (optional but recommended):
+python3 -m venv venv
+source venv/bin/activate
+
+3. Install dependencies:
+pip install -r requirements.txt
+
+4. (Optional) Set up the desktop entry for easy launching:
+- Copy `YTDL.desktop` to your applications directory:
+cp YTDL.desktop ~/.local/share/applications/
+(i had to systemwide install with sudo ####sudo cp YTDL.desktop /usr/share/applications/)
+
+- Update the `Exec` and `Icon` paths in `YTDL.desktop` to match your system:
+
+Exec=/path/to/ytdl-tool/ytdl.py
+Icon=/path/to/ytdl-tool/asuka.png
+
+- Note: You might need to make `ytdl.py` executable: `chmod +x ytdl.py` (this was needed for me to make work on my linux mint machine)
+
+## Usage
+1. Run the tool:
+
+python3 ytdl.py
+
+Or, if you set up the desktop entry, launch "YTDL" from your application menu.
+2. Enter a YouTube URL, choose a download path, and click "Download Video".
+
+## Notes
+- Ensure `asuka.png` and `chibiytdl.png` are in the same directory as `ytdl.py`, or update the paths in `ytdl.py` accordingly.
+- This tool requires an internet connection to download videos.
+

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Your Application Name
 Comment=Downloader for YouTube video and audio
-Exec=/home/oem/myenv/bin/python3 /home/oem/Downloads/YTDL.py
-Icon=/home/oem/Downloads/auska.png
+Exec=/home/oem/YoutubeDLGUI/venv/bin/python3 /home/oem/YoutubeDLGUI/YTDL.py
+Icon=/home/oem/YoutubeDLGUI/asuka.png
 Terminal=false
 Type=Application
 Categories=Utility;
